@@ -10,7 +10,9 @@ auth_token = os.environ["TWILIO_TOKEN_TEST"]
 client = Client(account_sid, auth_token)
 
 message = client.api.account.messages.create(
-    to=os.environ["BEC_NUMBER"], from_=os.environ["TWILIO_NUMBER_TEST"], body="Testing brag log heeeey"
+    to=os.environ["BEC_NUMBER"],
+    from_=os.environ["TWILIO_NUMBER_TEST"],
+    body="Testing brag log heeeey"
 )
 
 # live credentials
@@ -19,5 +21,7 @@ message = client.api.account.messages.create(
 # client = Client(account_sid, auth_token)
 #
 # message = client.api.account.messages.create(
-#     to=os.environ["BEC_NUMBER"], from_=os.environ["TWILIO_NUMBER"], body="Testing brag log heeeey"
+#     to=os.environ["BEC_NUMBER"],
+#     from_=os.environ["TWILIO_NUMBER"],
+#     body="Testing brag log heeeey"
 # )
