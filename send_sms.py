@@ -43,9 +43,12 @@ def brag_timer():
     # s.enter(DELAY, 1, brag_log(s), (s,))
     # s.run()
 
+# hack version
     for i in range(0, 7):
         brag_reminder(get_numbers())
         time.sleep(5)
+        # time.sleep(86400) # seconds in a day
+
 
     brag_log()
 
@@ -62,7 +65,7 @@ def brag_log():
 
             # stores message in the number's array of messages
             msg_by_num[message.from_].append(message.body)
-    print msg_by_num
+    print(msg_by_num)
 
     for number, messages in msg_by_num.items():
         messages = messages[0:7]

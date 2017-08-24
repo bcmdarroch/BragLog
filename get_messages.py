@@ -16,7 +16,7 @@ def date_sent():
 def messages_from_me():
     for message in client.messages.list():
         if message.direction == 'inbound':
-            print message.body
+            print(message.body)
 
 
 def test():
@@ -46,12 +46,12 @@ s = sched.scheduler(time.time, time.sleep)
 #     return number_array
 #
 #
-# print test()
-# print "TIME STAMP:"
-print date_sent()
-# print "MESSAGES FROM MEEEE:"
-print messages_from_me()
-# print "FROM TEST:"
-# print test()
-# print client.messages.list()
-# print time.localtime(time.time())
+# print(test())
+# print("TIME STAMP:")
+print(date_sent())
+# print("MESSAGES FROM MEEEE:")
+print(messages_from_me())
+# print("FROM TEST:")
+# print(test())
+print(client.messages.list())
+# print(time.localtime(time.time()))
